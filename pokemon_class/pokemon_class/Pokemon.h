@@ -15,15 +15,15 @@
 class Pokemon
 {
 public:
-    std::string pokemon;
     int number;
+    std::string pokemon;
     std::string type;
     std::string secondType;
 
-    Pokemon() {}
+    Pokemon();
     Pokemon(const std::string pName, int pNum, const std::string pType) : pokemon(pName), number(pNum), type(pType) {}
     Pokemon(const std::string pName, int pNum, const std::string pType, const std::string sType) : pokemon(pName), number(pNum), type(pType), secondType(sType) {}
-    ~Pokemon() {}
+    ~Pokemon();
 
     void getType1();
     void getType2();
@@ -32,7 +32,7 @@ public:
         least one type is the same, the function returns true; if the objects do not have any type
         in common, the function returns false
     */
-    bool commonType(const Pokemon obj) const;
+    bool commonType(const Pokemon &obj) const;
     void print() const;
 };
 

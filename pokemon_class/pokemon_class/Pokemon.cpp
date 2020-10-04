@@ -6,19 +6,25 @@
 	CS A250
 	A2 - Pokemon Class
 */
+
+#include <string>
+#include <iostream>
+
 #include "Pokemon.h"
 
-void Pokemon::getType1() 
+using namespace std;
+
+void Pokemon::getType1()
 {
     std::cout << type;
 }
 
-void Pokemon::getType2() 
+void Pokemon::getType2()
 {
-	std::cout << secondType;
+    std::cout << secondType;
 }
 
-bool Pokemon::commonType(const Pokemon obj) const
+bool Pokemon::commonType(const Pokemon &obj) const
 {
     if (obj.type == type || (obj.secondType != "" && obj.secondType == type) || (secondType != "" && obj.type == secondType) || (obj.secondType != "" && obj.secondType == secondType))
     {

@@ -7,13 +7,13 @@
 	A2 - Pokemon Class
 */
 #include "Pokemon.h"
+
 #include <string>
 #include <iostream>
-#include "Pokemon.h"
 
 using namespace std;
 
-void test(const Pokemon& pokemon1, const Pokemon& pokemon2);
+void test(const Pokemon &pokemon1, const Pokemon &pokemon2);
 
 int main(void)
 {
@@ -35,7 +35,7 @@ int main(void)
 	test(charmander, volpix);
 	test(charmander, tentacruel);
 	test(arbok, tentacruel);
-	
+
 	cout << endl;
 
 	// system("Pause");
@@ -43,10 +43,11 @@ int main(void)
 	return 0;
 }
 
-void test(const Pokemon& pokemon1, const Pokemon& pokemon2)
+void test(const Pokemon &pokemon1, const Pokemon &pokemon2)
 {
 	pokemon1.print();
 	cout << endl;
 	pokemon2.print();
-	cout << "\n    Common type? " << ((pokemon1.commonType(pokemon2)) ? "Yes" : "No"); cout << "\n------------------------------\n";
+	cout << "\n    Common type? " << ((pokemon1.commonType(pokemon2)) ? "Yes" : "No");
+	cout << "\n------------------------------\n";
 }
